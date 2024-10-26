@@ -1,8 +1,2 @@
 
-
-
-export function Button () {
-	return (
-		<button>Ok</button>
-	);
-}
+export { default as BackgroundTile } from "./tiles/BackgroundTile/BackgroundTile";
