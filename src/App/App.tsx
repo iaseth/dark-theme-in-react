@@ -6,7 +6,7 @@ import rediconsJson from './redicons.json';
 
 import { Footer, Header } from './components';
 import { useDarkTheme } from './hooks';
-import { BackgroundColorTile, TextColorTile } from './ui';
+import { BackgroundColorTile, CardsGrid, TextColorTile } from './ui';
 
 
 
@@ -19,13 +19,13 @@ export default function App () {
 		<div className={`app-root select-none ${darkTheme ? "theme-dark" : "theme-light"}`}>
 			<Header {...{toggleDarkTheme}} />
 
-			<main className="min-h-screen px-4 py-20">
-				<section className='container cards-grid'>
+			<main className="min-h-screen">
+				<CardsGrid title='Defaults'>
 					<BackgroundColorTile bgClass='bg-default' />
 					<TextColorTile textClass='text-default' />
-				</section>
+				</CardsGrid>
 
-				<section className='container cards-grid'>
+				<CardsGrid title='Background' className='bg-darker-100'>
 					<BackgroundColorTile bgClass='bg-darker-100' />
 					<BackgroundColorTile bgClass='bg-darker-200' />
 					<BackgroundColorTile bgClass='bg-darker-300' />
@@ -33,9 +33,9 @@ export default function App () {
 					<BackgroundColorTile bgClass='bg-lighter-100' />
 					<BackgroundColorTile bgClass='bg-lighter-200' />
 					<BackgroundColorTile bgClass='bg-lighter-300' />
-				</section>
+				</CardsGrid>
 
-				<section className='container cards-grid'>
+				<CardsGrid title='Text'>
 					<TextColorTile textClass='text-darker-100' />
 					<TextColorTile textClass='text-darker-200' />
 					<TextColorTile textClass='text-darker-300' />
@@ -43,7 +43,7 @@ export default function App () {
 					<TextColorTile textClass='text-lighter-100' />
 					<TextColorTile textClass='text-lighter-200' />
 					<TextColorTile textClass='text-lighter-300' />
-				</section>
+				</CardsGrid>
 			</main>
 
 			<Footer />

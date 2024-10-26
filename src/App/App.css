@@ -19,5 +19,3 @@ h6, .h6, .p6 { @apply text-xs; }
 .H6, .P6 { @apply text-3xl; }
 
 .container { @apply max-w-5xl mx-auto; }
-
-.cards-grid { @apply grid md:grid-cols-3 gap-6; }
