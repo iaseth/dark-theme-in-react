@@ -1,13 +1,13 @@
 
 
 
-interface BackgroundTileProps {
+interface BackgroundColorTileProps {
 	bgClass: string
 }
 
-export default function BackgroundTile ({
+export default function BackgroundColorTile ({
 	bgClass
-}: BackgroundTileProps) {
+}: BackgroundColorTileProps) {
 	return (
 		<section className={`px-6 py-8 text-center ${bgClass} rounded`}>
 			<h2>{bgClass}</h2>
