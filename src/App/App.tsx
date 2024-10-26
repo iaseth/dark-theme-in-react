@@ -6,7 +6,7 @@ import rediconsJson from './redicons.json';
 
 import { Footer, Header } from './components';
 import { useDarkTheme } from './hooks';
-import { BackgroundTile } from './ui';
+import { BackgroundTile, TextColorTile } from './ui';
 
 
 
@@ -21,6 +21,11 @@ export default function App () {
 
 			<main className="min-h-screen px-4 py-20">
 				<section className='container cards-grid'>
+					<BackgroundTile bgClass='bg-default' />
+					<TextColorTile textClass='text-default' />
+				</section>
+
+				<section className='container cards-grid'>
 					<BackgroundTile bgClass='bg-darker-100' />
 					<BackgroundTile bgClass='bg-darker-200' />
 					<BackgroundTile bgClass='bg-darker-300' />
@@ -28,8 +33,16 @@ export default function App () {
 					<BackgroundTile bgClass='bg-lighter-100' />
 					<BackgroundTile bgClass='bg-lighter-200' />
 					<BackgroundTile bgClass='bg-lighter-300' />
+				</section>
 
-					<BackgroundTile bgClass='bg-default' />
+				<section className='container cards-grid'>
+					<TextColorTile textClass='text-darker-100' />
+					<TextColorTile textClass='text-darker-200' />
+					<TextColorTile textClass='text-darker-300' />
+
+					<TextColorTile textClass='text-lighter-100' />
+					<TextColorTile textClass='text-lighter-200' />
+					<TextColorTile textClass='text-lighter-300' />
 				</section>
 			</main>
 
