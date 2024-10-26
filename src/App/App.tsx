@@ -19,6 +19,9 @@ export default function App () {
 			<Header {...{toggleDarkTheme}} />
 
 			<main className="min-h-screen px-4 py-20">
+				<section className='container grid md:grid-cols-3'>
+					<h1>This is some text</h1>
+				</section>
 			</main>
 
 			<Footer />

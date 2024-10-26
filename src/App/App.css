@@ -17,3 +17,5 @@ h6, .h6, .p6 { @apply text-xs; }
 .H4, .P4 { @apply text-5xl; }
 .H5, .P5 { @apply text-4xl; }
 .H6, .P6 { @apply text-3xl; }
+
+.container { @apply max-w-5xl mx-auto; }

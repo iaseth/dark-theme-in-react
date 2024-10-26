@@ -2,25 +2,45 @@
 .app-root {
 	@apply bg-zinc-200 text-zinc-800;
 
-	.bg-body { @apply bg-zinc-200; }
-	.bg-button { @apply bg-zinc-50; }
+	.bg-default { @apply bg-zinc-200; }
+	.text-default { @apply text-zinc-800; }
 
-	.text-100 { @apply text-zinc-900; }
-	.text-200 { @apply text-zinc-800; }
-	.text-300 { @apply text-zinc-700; }
-	.text-400 { @apply text-zinc-600; }
-	.text-500 { @apply text-zinc-500; }
+	.bg-lighter-100 { @apply bg-zinc-100; }
+	.bg-lighter-200 { @apply bg-zinc-50; }
+	.bg-lighter-300 { @apply bg-white; }
+
+	.bg-darker-100 { @apply bg-zinc-300; }
+	.bg-darker-200 { @apply bg-zinc-400; }
+	.bg-darker-300 { @apply bg-zinc-500; }
+
+	.text-lighter-100 { @apply text-zinc-700; }
+	.text-lighter-200 { @apply text-zinc-600; }
+	.text-lighter-300 { @apply text-zinc-500; }
+
+	.text-darker-100 { @apply text-zinc-900; }
+	.text-darker-200 { @apply text-zinc-950; }
+	.text-darker-300 { @apply text-black; }
 }
 
 .app-root.theme-dark {
-	@apply bg-zinc-950 text-zinc-200;
+	@apply bg-zinc-800 text-zinc-200;
 
-	.bg-body { @apply bg-zinc-950; }
-	.bg-button { @apply bg-zinc-900; }
+	.bg-default { @apply bg-zinc-800; }
+	.text-default { @apply text-zinc-200; }
 
-	.text-100 { @apply text-zinc-100; }
-	.text-200 { @apply text-zinc-200; }
-	.text-300 { @apply text-zinc-300; }
-	.text-400 { @apply text-zinc-400; }
-	.text-500 { @apply text-zinc-500; }
+	.bg-lighter-100 { @apply bg-zinc-700; }
+	.bg-lighter-200 { @apply bg-zinc-600; }
+	.bg-lighter-300 { @apply bg-zinc-500; }
+
+	.bg-darker-100 { @apply bg-zinc-900; }
+	.bg-darker-200 { @apply bg-zinc-950; }
+	.bg-darker-300 { @apply bg-black; }
+
+	.text-lighter-100 { @apply text-zinc-100; }
+	.text-lighter-200 { @apply text-zinc-50; }
+	.text-lighter-300 { @apply text-white; }
+
+	.text-darker-100 { @apply text-zinc-300; }
+	.text-darker-200 { @apply text-zinc-400; }
+	.text-darker-300 { @apply text-zinc-500; }
 }
