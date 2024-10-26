@@ -3,14 +3,35 @@ import React from "react";
 
 
 
-export const useDarkTheme = (intial: boolean, localStorageKey: string = "darkTheme"): [boolean, () => void] => {
-	const [v, setV] = React.useState(getFromLocalStorage(localStorageKey, intial));
-	const toggle = () => setV(x => {
+interface useDarkThemeProps {
+	intial: boolean,
+	keyBoardShortCut?: string,
+	localStorageKey?: string
+}
+
+export const useDarkTheme = ({
+	intial,
+	keyBoardShortCut='D',
+	localStorageKey="darkTheme"
+}: useDarkThemeProps): [boolean, () => void] => {
+	const [darkTheme, setDarkTheme] = React.useState(getFromLocalStorage(localStorageKey, intial));
+	const toggleDarkTheme = () => setDarkTheme(x => {
 		LS.setItem(localStorageKey, JSON.stringify(!x));
 		return !x;
 	});
 
-	return [v, toggle];
+	React.useEffect(() => {
+		const handleKeydown = (ev: KeyboardEvent) => {
+			switch (ev.key.toUpperCase()) {
+				case keyBoardShortCut.toUpperCase(): toggleDarkTheme(); break;
+			}
+		};
+
+		window.addEventListener('keydown', handleKeydown);
+		return () => window.removeEventListener('keydown', handleKeydown);
+	}, [toggleDarkTheme]);
+
+	return [darkTheme, toggleDarkTheme];
 };
 
 export default useDarkTheme;

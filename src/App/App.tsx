@@ -3,31 +3,20 @@ import './dark-theme.scss';
 
 import { red } from 'redicons';
 import rediconsJson from './redicons.json';
-import { useDarkTheme } from './hooks';
-import React from 'react';
+
 import { Footer, Header } from './components';
+import { useDarkTheme } from './hooks';
 
 
 
 red.addIcons(rediconsJson.icons);
 
 export default function App () {
-	const [darkTheme, toggleDarkTheme] = useDarkTheme(false);
-
-	React.useEffect(() => {
-		const handleKeydown = (ev: KeyboardEvent) => {
-			switch (ev.key) {
-				case 'd': toggleDarkTheme(); break;
-			}
-		};
-
-		window.addEventListener('keydown', handleKeydown);
-		return () => window.removeEventListener('keydown', handleKeydown);
-	}, [toggleDarkTheme]);
+	const [darkTheme, toggleDarkTheme] = useDarkTheme({ intial: false });
 
 	return (
-		<div className={`app-root ${darkTheme ? "theme-dark" : "theme-light"}`}>
-			<Header />
+		<div className={`app-root select-none ${darkTheme ? "theme-dark" : "theme-light"}`}>
+			<Header {...{toggleDarkTheme}} />
 
 			<main className="min-h-screen px-4 py-20">
 			</main>
