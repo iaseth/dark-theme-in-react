@@ -1,0 +1,26 @@
+
+.app-root {
+	@apply bg-zinc-200 text-zinc-800;
+
+	.bg-body { @apply bg-zinc-200; }
+	.bg-button { @apply bg-zinc-50; }
+
+	.text-100 { @apply text-zinc-900; }
+	.text-200 { @apply text-zinc-800; }
+	.text-300 { @apply text-zinc-700; }
+	.text-400 { @apply text-zinc-600; }
+	.text-500 { @apply text-zinc-500; }
+}
+
+.app-root.theme-dark {
+	@apply bg-zinc-950 text-zinc-200;
+
+	.bg-body { @apply bg-zinc-950; }
+	.bg-button { @apply bg-zinc-900; }
+
+	.text-100 { @apply text-zinc-100; }
+	.text-200 { @apply text-zinc-200; }
+	.text-300 { @apply text-zinc-300; }
+	.text-400 { @apply text-zinc-400; }
+	.text-500 { @apply text-zinc-500; }
+}
