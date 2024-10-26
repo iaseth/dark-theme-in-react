@@ -3,9 +3,9 @@ import './dark-theme.scss';
 
 import { red } from 'redicons';
 import rediconsJson from './redicons.json';
-import { MainScreen } from '@/screens';
 import { useDarkTheme } from './hooks';
 import React from 'react';
+import { Footer, Header } from './components';
 
 
 
@@ -27,7 +27,12 @@ export default function App () {
 
 	return (
 		<div className={`app-root ${darkTheme ? "theme-dark" : "theme-light"}`}>
-			<MainScreen />
+			<Header />
+
+			<main className="min-h-screen px-4 py-20">
+			</main>
+
+			<Footer />
 		</div>
 	);
 }
