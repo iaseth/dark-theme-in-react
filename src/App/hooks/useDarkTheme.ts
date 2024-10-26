@@ -13,8 +13,10 @@ export const useDarkTheme = ({
 	intial,
 	keyBoardShortCut='D',
 	localStorageKey="darkTheme"
-}: useDarkThemeProps): [boolean, () => void] => {
+}: useDarkThemeProps): [string, () => void] => {
 	const [darkTheme, setDarkTheme] = React.useState(getFromLocalStorage(localStorageKey, intial));
+	const theme = darkTheme ? "theme-dark" : "theme-light";
+
 	const toggleDarkTheme = () => setDarkTheme(x => {
 		LS.setItem(localStorageKey, JSON.stringify(!x));
 		return !x;
@@ -31,7 +33,7 @@ export const useDarkTheme = ({
 		return () => window.removeEventListener('keydown', handleKeydown);
 	}, [toggleDarkTheme]);
 
-	return [darkTheme, toggleDarkTheme];
+	return [theme, toggleDarkTheme];
 };
 
 export default useDarkTheme;

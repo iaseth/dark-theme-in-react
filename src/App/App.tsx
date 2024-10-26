@@ -13,10 +13,10 @@ import { BackgroundColorTile, CardsGrid, TextColorTile } from './ui';
 red.addIcons(rediconsJson.icons);
 
 export default function App () {
-	const [darkTheme, toggleDarkTheme] = useDarkTheme({ intial: false });
+	const [theme, toggleDarkTheme] = useDarkTheme({ intial: false });
 
 	return (
-		<div className={`app-root select-none ${darkTheme ? "theme-dark" : "theme-light"}`}>
+		<div className={`app-root select-none ${theme}`}>
 			<Header {...{toggleDarkTheme}} />
 
 			<main className="min-h-screen">
